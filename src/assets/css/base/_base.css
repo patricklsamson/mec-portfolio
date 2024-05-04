@@ -1,39 +1,129 @@
+@font-face {
+  font-family: "PPFormula Condensed";
+  font-weight: 700;
+  src: url("../../fonts/PPFormula-CondensedBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "PPFormula Condensed";
+  font-weight: 300;
+  src: url("../../fonts/PPFormula-CondensedThin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Hans Kendrick";
+  font-weight: normal;
+  src: url("../../fonts/HansKendrick-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Hans Kendrick";
+  font-weight: 700;
+  src: url("../../fonts/HansKendrick-Bold.woff2") format("woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --color-accent: #c5fcfc;
+  --color-dark: #121315;
+  --color-light: #e0eeee;
+  --color-grey: hsla(222, 6%, 67%, 0.2);
+  --font-heading: "PPFormula Condensed";
+  --font-body: "Hans Kendrick";
+  --weight-obese: 700;
+  --weight-light: 300;
+  --weight-regular: 400;
+  font-family: var(--font-body);
   line-height: 1.5;
   font-weight: 400;
-
+  color: var(--color-light);
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  cursor: none;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-obese);
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.229px;
+}
+
+.xlarge-heading {
+  font-size: clamp(6.25rem, 17.56vw, 12.5rem);
+}
+
+h6,
+.h6 {
+  font-size: 1.5rem;
+}
+
+h5,
+.h5 {
+  font-size: 1.75rem;
+}
+
+h4,
+.h4 {
+  font-size: 2rem;
+}
+
+h3,
+.h3 {
+  font-size: clamp(2.25rem, 4.68vw, 6.25rem);
+}
+
+h2,
+.h2 {
+  font-size: clamp(2.5rem, 5.83vw, 8.125rem);
+}
+
+h1,
+.h1 {
+  font-size: clamp(3.125rem, 7.39vw, 9.375rem);
+}
+
+stroke {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+}
+
+p {
+  font-size: 1.375rem;
+}
+
+img {
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+  object-position: center;
+}
+
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  display: inline-block;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 
 button {
@@ -57,7 +147,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -68,11 +158,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+} */
