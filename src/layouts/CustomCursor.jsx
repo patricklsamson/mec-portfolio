@@ -19,7 +19,7 @@ const CursorStyle = createGlobalStyle`
 export const CustomCursor = () => {
   const container = useRef();
   useGSAP(
-    (context, contextSafe) => {
+    (_, contextSafe) => {
       const moveOnViewport = contextSafe((event) => {
         const mouseX = event.clientX;
         const mouseY = event.clientY;
@@ -34,9 +34,7 @@ export const CustomCursor = () => {
       });
       document.addEventListener("mousemove", moveOnViewport);
 
-      // 👍 we remove the event listener in the cleanup function below.
       return () => {
-        // <-- cleanup
         document.removeEventListener("mousemove", moveOnViewport);
       };
     },
@@ -48,9 +46,7 @@ export const CustomCursor = () => {
       <CursorStyle />
 
       <div className="cursor-wrapper pointer-none flex x-center y-center fixed position-full">
-        <div className="cursor" ref={container}>
-          {" "}
-        </div>
+        <div className="cursor" ref={container}></div>
       </div>
       <Header />
       <Outlet />

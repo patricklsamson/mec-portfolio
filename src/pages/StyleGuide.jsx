@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
-import { Button, Image } from "../components";
+
+const StyleGuideStyle = createGlobalStyle``;
 
 export const StyleGuide = () => {
-  return <div>StyleGuide</div>;
+  return <div><StyleGuideStyle />StyleGuide</div>;
 };
