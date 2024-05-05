@@ -1,8 +1,7 @@
 import { createGlobalStyle } from "styled-components";
-import { Button, Image } from "../components";
 
 const HomeStyle = createGlobalStyle`
-  #app {
+  #home {
     .card {
       padding: 2em;
     }
@@ -14,5 +13,5 @@ const HomeStyle = createGlobalStyle`
 `;
 
 export const Home = () => {
-  return <main id="app"></main>;
+  return <main id="home"><HomeStyle /></main>;
 };

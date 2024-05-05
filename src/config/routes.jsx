@@ -10,12 +10,11 @@ export const router = createBrowserRouter([
         index: true,
         lazy: lazy(() => import("../pages/Home"), false),
       },
+      {
+        path: "/style-guide",
+        lazy: lazy(() => import("../pages/StyleGuide"), false),
+      },
     ],
-  },
-
-  {
-    path: "/style-guide",
-    lazy: lazy(() => import("../pages/StyleGuide"), false),
   },
   {
     path: "*",
